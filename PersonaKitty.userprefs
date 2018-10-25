@@ -1,13 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\ScreenFix.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\AffectionManager.cs">
     <Files>
-      <File FileName="..\BBB\Assets\Scripts\IgnoreCollider.cs" Line="15" Column="86" />
-      <File FileName="Assets\Scripts\Ball.cs" Line="11" Column="3" />
-      <File FileName="Assets\CollisionCheck.cs" Line="9" Column="60" />
-      <File FileName="Assets\Speech.cs" Line="14" Column="19" />
-      <File FileName="Assets\Drag.cs" Line="8" Column="22" />
-      <File FileName="Assets\ScreenFix.cs" Line="9" Column="31" />
+      <File FileName="..\BBB\Assets\Scripts\IgnoreCollider.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Ball.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\AffectionManager.cs" Line="70" Column="21" />
+      <File FileName="Assets\Scripts\Clock.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Drag.cs" Line="23" Column="1" />
+      <File FileName="Assets\Scripts\Speech.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
