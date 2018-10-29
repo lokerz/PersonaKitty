@@ -4,12 +4,23 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Speech : MonoBehaviour {
-	Text textbox;
-	// Use this for initialization
-	
-	public void SpeechTrigger(string speech){
+	private Text textbox;
+	private SpeechManager speechManager;
+
+	void Start(){
+		speechManager = GameObject.Find("SpeechManager").GetComponent<SpeechManager> ();
+		gameObject.SetActive (false);
+	}
+
+	public void SpeechTrigger(string type){
+		gameObject.SetActive (true);
 		textbox = GetComponentInChildren<Text> ();
-		textbox.text = speech;
+		if (type == "play")
+			textbox.text = speechManager.RandomPlayWord ();
+		else if (type == "feed")
+			textbox.text = speechManager.RandomFeedWord ();
+		else if (type == "pet")
+			textbox.text = speechManager.RandomPetWord ();
 		StopCoroutine("deactivate");
 		StartCoroutine("deactivate");
 	}

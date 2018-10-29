@@ -52,12 +52,25 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\AffectionManager.cs" />
+     <Compile Include="Assets\Scripts\AffectionMeter.cs" />
      <Compile Include="Assets\Scripts\Ball.cs" />
      <Compile Include="Assets\Scripts\Clock.cs" />
      <Compile Include="Assets\Scripts\CollisionCheck.cs" />
      <Compile Include="Assets\Scripts\Drag.cs" />
+     <Compile Include="Assets\Scripts\PointAddition.cs" />
+     <Compile Include="Assets\Scripts\PseudoAnimation.cs" />
      <Compile Include="Assets\Scripts\ScreenFix.cs" />
      <Compile Include="Assets\Scripts\Speech.cs" />
+     <Compile Include="Assets\Scripts\SpeechManager.cs" />
+     <Compile Include="Assets\Scripts\SpriteSwap.cs" />
+     <None Include="Assets\Resources\ChatBubble\4.txt" />
+     <None Include="Assets\Resources\ChatBubble\Pet.txt" />
+     <None Include="Assets\Resources\ChatBubble\Food.txt" />
+     <None Include="Assets\Resources\ChatBubble\1.txt" />
+     <None Include="Assets\Resources\ChatBubble\2.txt" />
+     <None Include="Assets\Resources\ChatBubble\Play.txt" />
+     <None Include="Assets\Resources\ChatBubble\5.txt" />
+     <None Include="Assets\Resources\ChatBubble\3.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
