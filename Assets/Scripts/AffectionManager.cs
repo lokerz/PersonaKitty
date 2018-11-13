@@ -40,8 +40,6 @@ public class AffectionManager : MonoBehaviour {
 	}
 
 	void Update () {
-
-
 		if (afMeter != null)
 			afMeter.GetComponent<Text> ().text = Mathf.Floor(affectionValue).ToString ()+"%";
 
@@ -75,6 +73,8 @@ public class AffectionManager : MonoBehaviour {
 
 	public void Pet()
 	{
+		int petTemp;
+
 		petCount = PlayerPrefs.GetInt("lastPetCount", 0);
 		lastPetTime = DateTime.FromBinary(Convert.ToInt64(PlayerPrefs.GetString("lastPetTime", DateTime.Now.AddMinutes(-10).ToBinary().ToString())));
 		TimeSpan ts = DateTime.Now - lastPetTime;
@@ -94,8 +94,10 @@ public class AffectionManager : MonoBehaviour {
 			petCooldown = true;
 			PlayerPrefs.SetString("lastPetTime", DateTime.Now.ToBinary().ToString());
 		}
-
-		int petTemp = (int)Mathf.Floor((float)petValue [(int)(affectionValue / 10)] - (float)petValue [(int)(affectionValue / 10)] / 4 * petCount);
+		if (affectionValue >= 100)
+			petTemp = 0;
+		else
+			petTemp = (int)Mathf.Floor((float)petValue [(int)(affectionValue / 10)] - (float)petValue [(int)(affectionValue / 10)] / 4 * petCount);
 
 		affectionValue += petTemp;
 		pseudoAnimation.Rub ();
@@ -109,8 +111,13 @@ public class AffectionManager : MonoBehaviour {
 	}
 
 	public void Feed(){
+		int feedTemp;
+
 		if (!feedCooldown || !timerSystem) {
-			int feedTemp = feedValue [(int)(affectionValue / 10)];
+			if (affectionValue >= 100)
+				feedTemp = 0;
+			else
+				feedTemp = feedValue [(int)(affectionValue / 10)];
 
 			affectionValue += feedTemp;
 			pointAddition.addPoint (feedTemp);
@@ -120,6 +127,7 @@ public class AffectionManager : MonoBehaviour {
 	}
 
 	public void Play(){
+		int playTemp;
 		lastPlayTime = DateTime.FromBinary(Convert.ToInt64(PlayerPrefs.GetString("lastPlayTime", DateTime.Now.AddHours(-2).ToBinary().ToString())));
 		TimeSpan ts = DateTime.Now - lastPlayTime;
 		Debug.Log(ts);
@@ -129,7 +137,10 @@ public class AffectionManager : MonoBehaviour {
 			playCooldown = true;
 
 		if (!playCooldown) {
-			int playTemp = playValue [(int)(affectionValue / 10)];
+			if (affectionValue >= 100)
+				playTemp = 0;
+			else
+				playTemp = playValue [(int)(affectionValue / 10)];
 
 			affectionValue += playTemp;
 			pointAddition.addPoint (playTemp);
