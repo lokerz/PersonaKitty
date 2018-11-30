@@ -141,3 +141,4 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.VR.WSA.Spa
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Clock
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Ball
 907c311975bf9647e4e8fc952586ff57 Assembly-CSharp.dll:.Drag
+a6e8703abeb8534269c14b0895aaac90 Assembly-CSharp.dll:.BackgroundManager

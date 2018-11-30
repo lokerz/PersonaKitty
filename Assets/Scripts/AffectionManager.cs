@@ -152,7 +152,11 @@ public class AffectionManager : MonoBehaviour {
 		PlayerPrefs.Save ();
 	}
 
-
+	public void Reset(){
+		affectionValue = 30;
+		PlayerPrefs.SetFloat("AffectionValue", affectionValue);
+		PlayerPrefs.Save();
+	}
 
 
 }
