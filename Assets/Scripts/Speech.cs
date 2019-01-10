@@ -19,16 +19,17 @@ public class Speech : MonoBehaviour {
 			textbox.text = speechManager.RandomPlayWord ();
 		else if (type == "feed")
 			textbox.text = speechManager.RandomFeedWord ();
-		else if (type == "pet")
+		else if (type == "pet" && !Pet.petMad)
 			textbox.text = speechManager.RandomPetWord ();
+		else if (type == "pet" && Pet.petMad)
+			textbox.text = "STOP IT!";
+
 		StopCoroutine("deactivate");
 		StartCoroutine("deactivate");
 	}
 
 	IEnumerator deactivate(){
-		while (true){
-			yield return new WaitForSeconds (3);
-			gameObject.SetActive (false);
-		}
+		yield return new WaitForSeconds (3);
+		gameObject.SetActive (false);
 	}
 }

@@ -11,10 +11,8 @@ public class PointAddition : MonoBehaviour {
 	private Text textBox;
 	private bool isMoving = false;
 	private Vector3 pos;
-	private PseudoAnimation pseudoAnimation;
 
 	void Start () {
-		pseudoAnimation = GameObject.Find ("Cat").GetComponent<PseudoAnimation> ();
 		pos = plusBox.transform.position;
 		textBox = plusBox.GetComponent<Text> ();
 		plusBox.SetActive (false);
@@ -47,7 +45,6 @@ public class PointAddition : MonoBehaviour {
 			yield return new WaitForSeconds (3);
 			isMoving = false;
 			plusBox.SetActive (false);
-			pseudoAnimation.Idle ();
 		}
 	}
 }
