@@ -35,6 +35,7 @@ public class ImageManager : MonoBehaviour {
 				box2.gameObject.SetActive (false);
 				box3.gameObject.SetActive (false);
 				box4.gameObject.SetActive (false);
+				StopCoroutine ("OffMinigame");
 				StartCoroutine ("OffMinigame");
 			}
 	}
